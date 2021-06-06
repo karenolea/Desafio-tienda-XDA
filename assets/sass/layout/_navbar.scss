@@ -1,0 +1,107 @@
+.o-navbar {
+  height: 4rem;
+  width: 100%;
+  // position: fixed;
+  position: relative;
+  top: 0;
+  background-color: $white;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      max-width: 100%;
+      padding-right: 1rem;
+    }
+
+    &__logo {
+      position: absolute;
+      background-color: $smoky-black;
+      color: $white;
+      text-transform: uppercase;
+      padding: 1.3rem 1.3rem;
+      bottom: -15px;
+    }
+
+    &__toggler {
+      // padding: 0.5rem;
+      color: $smoky-black;
+      display: inline-block;
+      margin-left: auto;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      appearance: none;
+      position: relative;
+      z-index: 2;
+      @include tablet-view {
+        display: none;
+      }
+
+    // to show nav links
+    &:checked ~ .o-navbar__collapsible {
+      height: 100vh;
+      opacity: 1;
+      background-color: $white;
+      }
+    }
+    
+    &__hamburger {
+      &::before {
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+        z-index: 2;
+        //   /* Use of unicode to avoid call FA library */
+        content: "\002630";
+        font-size: 30px;
+        font-weight: black;
+      }
+      @include tablet-view {
+        display: none;
+      }
+    }
+
+    &__collapsible {
+      /* mobile */
+      display: flex;
+      margin-left: auto;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      transition: all 0.5s ease;
+      opacity: 0;
+      // text-align: center;
+      @include tablet-view {
+        /* tablet */
+        position: static;
+        display: inline-block;
+        height: auto !important;
+        width: auto;
+        opacity: 1;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      display: inline-block;
+    }
+
+    &__list-item {
+      margin-right: 1rem;
+      margin-top: 2rem;
+      @include tablet-view {
+        margin-top: 0;
+        display: inline-block;
+      }
+    }
+    
+    &__list-link {
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+  }

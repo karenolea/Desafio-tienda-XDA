@@ -1,0 +1,32 @@
+//colors
+$white: hsl(0, 0%, 100%);
+$isabeline: hsl(0, 0%, 93%);
+$light-gray: hsl(0, 0%, 82%);
+$smoky-black: hsl(266, 28%, 5%);
+$granite-gray: hsl(270, 2%, 39%);
+$quick-silver: hsl(260, 2%, 65%);
+
+//typography
+
+//typefaces
+$old: "Old Standard TT", serif;
+$old-weight-regular: 400;
+$old-weight-bold: 700;
+
+$raleway: "Raleway", sans-serif;
+$raleway-weight-regular: 400;
+$raleway-weight-bold: 700;
+
+//font sizes
+$font-size-xxx-large: 50px;
+$font-size-xx-large: 30px;
+$font-size-x-large: 20px;
+$font-size-large: 18px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+$font-size-x-small: 12px;
+
+//breakpoint
+$laptop_view:992px;
+$tablet_view: 768px;
+$mobile_view:576px;

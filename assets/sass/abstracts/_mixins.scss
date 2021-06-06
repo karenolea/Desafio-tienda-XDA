@@ -1,0 +1,27 @@
+@mixin laptop-view {
+    @media (min-width: #{$laptop_view}) {
+      @content;
+      }
+    }
+
+@mixin tablet-view {
+@media (min-width: #{$tablet_view}) {
+  @content;
+  }
+}
+
+@mixin mobile-view {
+@media (max-width: #{$mobile_view}) {
+  @content;
+  }
+}
+
+@mixin texto_nav {
+  font-family: $raleway;
+  font-weight: $raleway-weight-bold;
+  font-weight: $font-size-large;
+  width: 150px;
+}
+
+  
+

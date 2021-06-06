@@ -1,0 +1,78 @@
+.button {
+  width: 98px;
+  height: 36px;
+  cursor: pointer;
+  font-weight: $old-weight-bold;
+  font-size: $font-size-x-small;
+
+  &:hover {
+    border: 2px solid $quick-silver;
+  }
+  &:focus {
+    color: $white;
+    border: 3px solid $quick-silver;
+  }
+
+  @include tablet-view {
+    width: 141px;
+    height: 45px;
+    font-size: $font-size-small;
+    &:hover {
+      border: 2px solid $quick-silver;
+    }
+
+    &:focus {
+      color: $white;
+      border: 3px solid $quick-silver;
+    }
+  }
+}
+
+.collapsible {
+  text-align: right;
+  @include tablet-view {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1.5em;
+    font-size: 1.8rem;
+    label:before {
+      height: 2px;
+      width: 20px;
+      background: #333;
+      display: inline-block;
+      content: "";
+      box-shadow: 0px -5px 0px 0px #333, 0px -10px 0px 0px #333;
+      margin-right: 10px;
+      transition: all 0.5s;
+      position: relative;
+      opacity: 1;
+    }
+    label {
+      display: block;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  
+  .chekbox input[type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  #collapse:checked ~ li {
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  #collapse:checked + label:before {
+    position: relative;
+    right: calc(-160px);
+    opacity: 0.5;
+  }
+}

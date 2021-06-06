@@ -1,0 +1,58 @@
+
+.hero-section__container {
+  height: 100%;
+  
+  .hero-section__main-content {
+    padding: 2rem;
+  }
+  .hero-section__button {
+    padding-top: 16px;
+  }
+}
+.container_newspaper{
+  display: flex;
+  width: 100%;
+} 
+
+//newsletter
+.hero-section__newsletter {
+  background-color: $smoky-black;
+  color: $white;
+  padding-left: 2rem;
+  height: 130px;
+  width: 90%;
+  &__texto {
+    color: $white;    
+  }
+  .hero-section__placeholder {
+    width: 13rem;
+    font-size: $font-size-x-small;
+  }
+}
+
+//suscribir
+.col3{
+  float: right;
+  writing-mode: vertical-lr;
+  margin-top: 2rem;
+}
+
+.hero-section__image {
+  background-image: url(../img/imagen1.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  max-height: 100vh;
+  height: 300px;
+  @media (min-width: $tablet_view) {
+    min-height: 100%;
+  }
+  @media (min-width: $mobile_view) {
+    min-height: 100%;
+  }
+}
+
+
+
+
+
